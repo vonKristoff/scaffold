@@ -1,13 +1,14 @@
 <?php
 
 // -------------------------------------------------------------
-// Exclude pages from search results
+// Search
 // -------------------------------------------------------------
 
 add_filter('pre_get_posts','clutterless_mySearchFilter');
+
 function clutterless_mySearchFilter($query) {
 	 if ($query->is_search) {
-	    $query->set('post_type', 'post');
+	    $query->set('post_type', array( 'post','performance' ) );
 	 }
 	 return $query;
 }
@@ -15,6 +16,14 @@ function clutterless_mySearchFilter($query) {
  // -------------------------------------------------------------
  // Enable Widgets
  // -------------------------------------------------------------
+
+function register_custom_menu() {
+  register_nav_menus(array(
+  	'header-menu' => __( 'Header Menu' ),
+  	'footer-menu'=> __( 'Footer' ),
+  	));
+}
+add_action( 'init', 'register_custom_menu' );
 
 add_action('widgets_init', 'slidebars');
 
@@ -107,7 +116,7 @@ add_action('wp_enqueue_scripts', 'enqueue_scripts');
 
 function enqueue_scripts(){
 	// Stylesheet	
-	wp_enqueue_style( 'clutterless', get_stylesheet_directory_uri() . '/css/style.css');
+	wp_enqueue_style( 'style', get_stylesheet_uri());
 
 	// Google Fonts
 	wp_enqueue_style('google-webfonts-nc', 'http://fonts.googleapis.com/css?family=News+Cycle:400');
@@ -130,15 +139,34 @@ function clutterless_favicon(){
 	}
 }
 
-// -------------------------------------------------------------
-
-
-
-
 // use simple styling for gallery deployment
 add_filter( 'use_default_gallery_style', '__return_false' );
 
+// -------------------------------------------------------------
+// Custom Post Type Formatting and Looping
+// -------------------------------------------------------------
 
+function includePostTypes(){
+	
+	$postypes = array('post','page','performance');
 
+	return $postypes;
+}
 
+function postTypeTemplate($type,$slug){
 
+	$template;
+
+    switch($type){
+		case 'post':
+		$template = get_template_part( 'loop' ); 
+		break;
+		case 'performance':
+		$template = get_template_part( 'loop' ); 
+		break;
+		case 'page':
+		$template = get_template_part( $slug . 'loop' ); 
+		break;
+	}
+	return $template;
+}

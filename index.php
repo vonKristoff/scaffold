@@ -2,17 +2,19 @@
 
          <div id="post">
 
-           <?php if ( have_posts() ) : while ( have_posts() ) : the_post(); ?>
+            <?php 	$posts = array ('post_type' => includePostTypes() ) ;
+					$query = new WP_Query($posts); 
 
-            <?php get_template_part('loop'); ?>
+            if ( $query->have_posts() ) : while ( $query->have_posts() ) : $query->the_post(); 
 
-            <?php endwhile; else: ?>
+            	postTypeTemplate( get_post_type(), 'index-' );	
+           
+            endwhile; else: ?>
 
-           <p>Sorry, no posts matched your criteria.</p>
-
-           <?php endif; ?>
-
+			<p>sorry, but there's some kind of error...</p>
             
+            <?php endif; ?>
+
           </div><!-- #post -->
 
 <?php get_footer(); ?>

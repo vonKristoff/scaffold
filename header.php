@@ -17,7 +17,9 @@
 </head>
 <body <?php body_class(); ?>>
 
-  <?php get_sidebar(); ?>
+	<?php wp_nav_menu( array( 'menu'=>'main','container_class' => 'menu-main' ) ); ?>
 
-  <div id="content">
+	<?php get_sidebar(); ?>
+
+	<div id="content">
 

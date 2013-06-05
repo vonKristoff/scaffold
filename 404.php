@@ -20,7 +20,7 @@
 
              <div class="post-content">
 
-                 <p>The page you are looking for does not exist.</p>
+                 <p>This isn't the page you are looking for...</p>
 
              </div><!-- .post-content -->
 

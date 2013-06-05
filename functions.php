@@ -107,7 +107,7 @@ add_action('wp_enqueue_scripts', 'enqueue_scripts');
 
 function enqueue_scripts(){
 	// Stylesheet	
-	wp_enqueue_style( 'clutterless', get_stylesheet_uri(), array(), 'screen' );
+	wp_enqueue_style( 'clutterless', get_stylesheet_directory_uri() . '/css/style.css');
 
 	// Google Fonts
 	wp_enqueue_style('google-webfonts-nc', 'http://fonts.googleapis.com/css?family=News+Cycle:400');

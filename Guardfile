@@ -3,9 +3,7 @@
 
 guard 'sass', :input => 'css'
 
-guard 'stylus', :output => 'css', :all_on_start => false, :all_on_change => true do
-  watch(%r{.+\.(styl)})
-end
+
 
 guard 'livereload' do
  

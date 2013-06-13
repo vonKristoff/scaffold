@@ -1,10 +1,10 @@
 <?php get_header(); ?>
-
+	
          <div id="post">
 
             <?php 	$posts = array ('post_type' => includePostTypes() ) ;
 					$query = new WP_Query($posts); 
-
+ 
             if ( $query->have_posts() ) : while ( $query->have_posts() ) : $query->the_post(); 
 
             	postTypeTemplate( get_post_type(), 'index-' );	

@@ -123,10 +123,9 @@ function enqueue_scripts(){
 	wp_enqueue_style('google-webfonts-mw', 'http://fonts.googleapis.com/css?family=Merriweather:700');
 	
 	// Scripts
-	// wp_enqueue_script('handle','{$url}filename.js',array(dependency-handle),'',loadinfooter:boolean);
 	$url = get_stylesheet_directory_uri() . '/js/';
 
-	// wp_enqueue_script('controller','{$url}controls.js',array(jquery),'',true);
+	wp_enqueue_script('slideshow',$url.'slideshow.js',array(jquery),'',true);
 	
 }
 
@@ -169,4 +168,22 @@ function postTypeTemplate($type,$slug){
 		break;
 	}
 	return $template;
+}
+
+function getAttachedImages($pageID){
+	$_ul = '<li class="slidedata">'; $ul_ = '</li>';
+	$images = get_children(array(
+		'post_parent' => $pageID,
+		'post_type' => 'attachment',
+		'post_mime_type' => 'image',
+		'order' => 'DESC' 
+	));
+	echo '<ul>';
+	foreach( $images as $image ) {
+		$attachmenturl = wp_get_attachment_url($image->ID);
+		// $attachmentimage = wp_get_attachment_image( $image->ID ,'large');
+		echo $_ul . $attachmenturl . $ul_;
+
+	}
+	echo '</ul>';
 }

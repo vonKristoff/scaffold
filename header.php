@@ -17,6 +17,8 @@
 </head>
 <body <?php body_class(); ?>>
 
+	<div class="slideshow"><?php getAttachedImages(2);?></div>
+
 	<?php wp_nav_menu( array( 'menu'=>'main','container_class' => 'menu-main' ) ); ?>
 
 	<?php get_sidebar(); ?>

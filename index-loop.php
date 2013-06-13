@@ -7,11 +7,11 @@
   </div><!-- .post-date -->
 
   <div class="post-title">
-
+		
     <h2><?php the_title(); ?></h2> 
 
   </div><!-- .post-title -->
-
+  <?php the_post_thumbnail('feature'); ?>
   <div class="post-content">
 
       <?php the_content();?>

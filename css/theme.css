@@ -195,7 +195,7 @@ a:hover {
 /* Blog seperator lines */
 #content .post {
   border-top: 1px solid #FFFFFF;
-  box-shadow: 0 -1px 0 #dddddd; }
+  box-shadow: 0 -1px 0 #DDDDDD; }
 
 /* Blog text color and shadow */
 #content {
@@ -564,6 +564,29 @@ a:hover {
 /* Misc */
 /* ------------------------------------------------ */
 /* WordPress requirements */
+.slideshow {
+  position: fixed;
+  z-index: -1;
+  width: 100%;
+  height: 100%; }
+  .slideshow ul {
+    list-style: none;
+    margin: 0px;
+    padding: 0px;
+    height: 100%; }
+    .slideshow ul .slidedata {
+      -webkit-transition: opacity 1.3s;
+      opacity: 0;
+      width: 100%;
+      height: 100%; }
+    .slideshow ul li {
+      position: fixed;
+      top: 0px;
+      left: 0px;
+      list-style: none;
+      margin: 0px;
+      padding: 0px; }
+
 .menu-main {
   width: 640px;
   margin: 0 auto;
@@ -583,3 +606,7 @@ a:hover {
     cursor: pointer; }
     .menu-main li:hover a {
       color: white; }
+
+.attachment-feature {
+  width: 100%;
+  height: auto; }

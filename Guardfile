@@ -7,6 +7,6 @@ guard 'sass', :input => 'css'
 
 guard 'livereload' do
  
-  watch(%r{.+\.(styl|css|js|php)})
+  watch(%r{.+\.(css|js|php)})
   
 end

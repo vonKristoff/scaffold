@@ -590,12 +590,19 @@ a:hover {
 .menu-main {
   width: 640px;
   margin: 0 auto;
-  background: #dddddd; }
+  background: #dddddd;
+  padding: 0 50px 0 50px;
+  position: fixed;
+  top: 0px;
+  left: 50%;
+  margin-left: -370px;
+  font-size: 0.6em;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.3); }
   .menu-main ul {
     margin: 0px; }
   .menu-main li {
+    line-height: inherit;
     font-family: serif;
-    font-size: 0.6em;
     width: 100px;
     display: inline-block;
     background: #ededed;
@@ -606,6 +613,14 @@ a:hover {
     cursor: pointer; }
     .menu-main li:hover a {
       color: white; }
+
+#content {
+  background: rgba(255, 255, 255, 0.75);
+  padding: 50px; }
+  #content .post {
+    padding: 20px 0 60px 0;
+    border-top: none;
+    box-shadow: none; }
 
 .attachment-feature {
   width: 100%;

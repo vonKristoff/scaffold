@@ -14,22 +14,24 @@
 			'background-position': 'center center'
 		})
 	})
-	
+
 	var total = urls.length + 1,
 		current = 1;
 
 	function nextSlide(){
-
-
+		console.log(current);
 		$('.slidedata:nth-child('+current+')').css('opacity','0');
-		current++;
+		current+=1;
 		if(current >= total) current = 1;
 		$('.slidedata:nth-child('+current+')').css('opacity','1');
 
 		setTimeout(nextSlide, 7000)
 	}
 
-	nextSlide();	
+	if($('body').hasClass('home')){ 
+		nextSlide();
+	}
+
 
 
 })(jQuery);

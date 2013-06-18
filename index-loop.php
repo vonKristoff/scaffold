@@ -14,7 +14,7 @@
   <?php the_post_thumbnail('feature'); ?>
   <div class="post-content">
 
-      <?php the_content();?>
+      <?php wpautop(the_content());?>
 
   </div><!-- .post-content -->
 

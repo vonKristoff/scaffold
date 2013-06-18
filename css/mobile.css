@@ -1,0 +1,54 @@
+@media screen and (max-width: 800px) {
+  body {
+    overflow-x: hidden; }
+
+  nav {
+    height: auto;
+    position: relative; }
+    nav .topnav li {
+      width: 100%; }
+    nav .topnav li:first-child {
+      margin-top: 40px;
+      float: none; }
+    nav .topnav li:last-child {
+      margin-top: 0px;
+      float: none; }
+    nav .topnav li:nth-child(2) {
+      position: absolute;
+      top: 0px; }
+    nav .menu-main {
+      width: 100%; }
+      nav .menu-main li {
+        width: 100%;
+        float: none; }
+
+  #content {
+    margin: 0px;
+    padding: 0px;
+    width: 100%; }
+    #content .post {
+      width: 80%;
+      min-width: 0%;
+      padding: 10%;
+      margin: 0px; }
+    #content .make {
+      padding: 0%; }
+      #content .make .make-img {
+        float: none;
+        width: 100%; }
+        #content .make .make-img figure {
+          width: 100%;
+          background: white;
+          padding: 13%; }
+          #content .make .make-img figure img {
+            max-width: 100%;
+            height: auto; }
+      #content .make .make-container {
+        float: none;
+        width: 100%; }
+
+  .box {
+    display: none; }
+
+  .pages {
+    margin-top: 0px; } }

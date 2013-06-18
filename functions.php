@@ -1,5 +1,24 @@
 <?php
 
+// DECLARE PAGE ID'S HERE
+function pid($id){
+
+	$page;
+
+    switch($id){
+		case 'page-name':
+		$page = 12; 
+		break;
+		case 'slides':
+		$page = 2;
+		break;
+		case 'new':
+		$page = 63;
+		break;
+	}
+	return $page;
+}
+
 // -------------------------------------------------------------
 // Search
 // -------------------------------------------------------------
@@ -126,7 +145,7 @@ function enqueue_scripts(){
 	$url = get_stylesheet_directory_uri() . '/js/';
 
 	wp_enqueue_script('slideshow',$url.'slideshow.js',array(jquery),'',true);
-	
+	wp_enqueue_script('control',$url.'controls.js',array(jquery),'',true);
 }
 
 // Favicon

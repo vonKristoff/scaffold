@@ -1,6 +1,7 @@
 <!DOCTYPE HTML>
 <html <?php language_attributes(); ?>>
 <head>
+<meta name="viewport" content="width=device-width">
 <meta http-equiv="Content-Type" content="<?php bloginfo('html_type'); ?>; charset=<?php bloginfo('charset'); ?>" />
 	<title><?php bloginfo('name'); ?></title>
 	
@@ -17,10 +18,10 @@
 </head>
 <body <?php body_class(); ?>>
 
-	<div class="slideshow"><?php getAttachedImages(2);?></div>
-
-	<?php wp_nav_menu( array( 'menu'=>'main','container_class' => 'menu-main' ) ); ?>
-
+	<div class="slideshow"><?php getAttachedImages(pid('slides'));?></div>
+	<nav>
+		<?php wp_nav_menu( array( 'menu'=>'main','container_class' => 'menu-main' ) ); ?>
+	</nav>
 	<?php get_sidebar(); ?>
 
 	<div id="content">

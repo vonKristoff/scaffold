@@ -587,6 +587,16 @@ a:hover {
       margin: 0px;
       padding: 0px; }
 
+nav {
+  width: 100%;
+  height: 50px;
+  background: white;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.37);
+  position: fixed;
+  z-index: 100;
+  top: 0px;
+  padding-top: 20px; }
+
 .menu-main {
   width: 640px;
   margin: 0 auto;
@@ -597,7 +607,7 @@ a:hover {
   left: 50%;
   margin-left: -370px;
   font-size: 0.6em;
-  border-bottom: 1px solid rgba(255, 255, 255, 0.3); }
+  border-bottom: 1px solid rgba(255, 255, 255, 0.9); }
   .menu-main ul {
     margin: 0px; }
   .menu-main li {
@@ -625,3 +635,92 @@ a:hover {
 .attachment-feature {
   width: 100%;
   height: auto; }
+
+.footer {
+  -webkit-transition: all 0.3s;
+  width: 100%;
+  height: 150px;
+  position: fixed;
+  bottom: -115px;
+  background: #e7e7e7;
+  border-top: 1px solid rgba(255, 255, 255, 0.3); }
+  .footer .footnote {
+    border-bottom: 1px solid rgba(0, 0, 0, 0.1); }
+    .footer .footnote p {
+      text-align: center;
+      font-size: 0.5em;
+      color: #666666;
+      margin-top: 5px;
+      margin-bottom: 5px; }
+  .footer .contents {
+    width: 100%;
+    margin: 20px auto; }
+
+.box {
+  color: transparent;
+  position: fixed;
+  bottom: 40px;
+  left: 50%;
+  margin-left: -5px; }
+
+.arrow {
+  width: 0;
+  height: 0;
+  border: 10px solid;
+  border-color: transparent;
+  border-top-color: black; }
+
+@media screen and (max-width: 800px) {
+  body {
+    overflow-x: hidden; }
+
+  nav {
+    height: auto;
+    position: relative; }
+    nav .topnav li {
+      width: 100%; }
+    nav .topnav li:first-child {
+      margin-top: 40px;
+      float: none; }
+    nav .topnav li:last-child {
+      margin-top: 0px;
+      float: none; }
+    nav .topnav li:nth-child(2) {
+      position: absolute;
+      top: 0px; }
+    nav .menu-main {
+      width: 100%; }
+      nav .menu-main li {
+        width: 100%;
+        float: none; }
+
+  #content {
+    margin: 0px;
+    padding: 0px;
+    width: 100%; }
+    #content .post {
+      width: 80%;
+      min-width: 0%;
+      padding: 10%;
+      margin: 0px; }
+    #content .make {
+      padding: 0%; }
+      #content .make .make-img {
+        float: none;
+        width: 100%; }
+        #content .make .make-img figure {
+          width: 100%;
+          background: white;
+          padding: 13%; }
+          #content .make .make-img figure img {
+            max-width: 100%;
+            height: auto; }
+      #content .make .make-container {
+        float: none;
+        width: 100%; }
+
+  .box {
+    display: none; }
+
+  .pages {
+    margin-top: 0px; } }

@@ -5,7 +5,7 @@ Performing-Arts wordpress scaffold template
 <ul>
 	<li>
 		<pre>includePostTypes()</pre>
-		<p>Edit in functions.php - returns array of custom post types to use as an $arg</p> 
+		<p>Defined in functions.php - returns array of custom post types to use as an $arg</p> 
 	</li>
 	<li>
 		<pre>postTypeTemplate($type,$slug)</pre>
@@ -15,6 +15,10 @@ Performing-Arts wordpress scaffold template
 		<pre>getAttachedImages($pageID)</pre>
 		<p>Attach images in media library to a page, and their urls are returned as html inside li items</p>
 		<p>Used for Slideshow.js</p>
+	</li>
+	<li>
+		<pre>pid('string')</pre>
+		<p>Define page ID's in Functions.php, then its easier to target custom post types and pages when deploying from local to remote server</p>
 	</li>
 	<li>
 		<p>Slideshow.js</p>
@@ -34,5 +38,8 @@ Performing-Arts wordpress scaffold template
 	</li>
 	<li>
 		<p>Gallery behaviours (from post) are set to default</p>
+	</li>
+	<li>
+		<p>Custom Fonts are reachable from VPS path, set in fonts.css</p>
 	</li>
 </ul>

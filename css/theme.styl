@@ -1,7 +1,97 @@
-@import "base.css"
 @import 'nib'
-menu
+@import "base.css"
+@import "reset.css"
+@import "slides"
+@import "fonts.css"
+
+$gap = 50px
+$width = 800px
+$std = 20px
+
+nav
+	width: 100%
+	height: $gap
+	background: #fff
+	box-shadow: 0 0 10px rgba(0,0,0,.37)
+	position: fixed
+	z-index: 100
+	top: 0px
+	padding-top: $std
+
+.menu-main
+	width: 640px
+	margin: 0 auto
+	background: #ddd
+	padding: 0 50px 0 50px
+	position: fixed
+	top: 0px
+	left: 50%
+	margin-left: -370px
+	font-size: .6em
+	border-bottom: 1px solid rgba(255,255,255,.9)
+	ul
+		margin: 0px
 	li 
-		display inline-block
+		line-height: inherit
+		font-family: serif
+		width: 100px
+		display: inline-block
+		background: #ededed
+		text-align: center
+		padding: 0px
+	li:hover
+		background: #333
+		cursor: pointer
 		a
-			color red
+			color: white
+
+#content
+	background: rgba(255,255,255,.75)
+	padding: 50px
+	.post 
+		padding: $std 0 60px 0
+		border-top: none
+		box-shadow: none // 0px 1px 0 #ddd
+		
+
+
+.attachment-feature
+	width: 100%
+	height: auto
+
+.footer
+	-webkit-transition: all .3s
+	width: 100%
+	height: 150px
+	position: fixed
+	bottom: -115px
+	background: rgb(231,231,231)
+	border-top: 1px solid rgba(255,255,255,.3)
+	.footnote
+		border-bottom: 1px solid rgba(0,0,0,.1)
+		p
+			text-align: center
+			font-size: .5em
+			color: #666
+			margin-top: 5px
+			margin-bottom: 5px
+		
+	.contents
+		width: 100%
+		margin: 20px auto
+		
+.box
+	color: transparent
+	position: fixed
+	bottom: 40px
+	left: 50%
+	margin-left: -5px
+
+.arrow 
+	width: 0
+	height: 0 
+	border: 10px solid
+	border-color: transparent 
+	border-top-color: black
+
+// @import "mobile"

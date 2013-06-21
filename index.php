@@ -1,7 +1,7 @@
 <?php get_header(); ?>
 	
          <div id="post">
-
+            <h1>SO LOOK AT THIS..</h1>
             <?php 	$posts = array ('post_type' => includePostTypes() ) ;
 					$query = new WP_Query($posts); 
  

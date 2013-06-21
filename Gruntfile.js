@@ -22,7 +22,11 @@ module.exports = function(grunt) {
 			stylus:{
 				files: ['css/*.styl'],
 				tasks: ['stylus'],
-				options:{ livereload: true }
+				options: { livereload: true }
+			},
+			scripts:{
+				files: ['js/*.js','*.php'],
+				options: { livereload: true }
 			}
 		}
 

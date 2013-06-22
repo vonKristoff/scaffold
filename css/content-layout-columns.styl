@@ -6,7 +6,9 @@
 	#post
 		column-count 3
 		column-gap .2em
+		column-rule 20px dotted coral
 		padding 20px
+		height auto
 		h1
 			column-span all
 			margin-bottom $gap
@@ -15,7 +17,7 @@
 			line-height: 100%
 			
 		.post
-
+			transition all .2s
 			padding 0px
 			width 100%
 			display inline-block
@@ -31,3 +33,13 @@
 			.post-content
 				padding 20px
 				background rgba(255,255,255,.9)
+
+	@media only screen and (max-width : 999px)
+		width 80%
+		#post
+			column-count 2
+			
+	@media only screen and (max-width : 599px)
+		width 100%
+		#post
+			column-count 1

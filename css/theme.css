@@ -15,7 +15,10 @@ nav{width:100%;height:50px;background:#fff;-webkit-box-shadow:0 0 10px rgba(0,0,
 .menu-main li{line-height:inherit;font-family:serif;width:100px;display:inline-block;background:#ededed;text-align:center;padding:0}
 .menu-main li:hover{background:#333;cursor:pointer;}
 .menu-main li:hover a{color:#fff}
-#content{width:1000px;background:rgba(0,0,0,0.8);word-wrap:break-word;}
+@media only screen and (max-width : 639px){.menu-main{width:100%;left:0;margin-left:0;padding:0}
+.menu-main li{display:block;width:100%;padding:5px 0;-webkit-border-radius:5px;border-radius:5px;border-top:1px solid rgba(255,255,255,0.5);border-bottom:1px solid rgba(0,0,0,0.1);}
+.menu-main li a{text-decoration:underline}
+}#content{width:1000px;background:rgba(0,0,0,0.8);word-wrap:break-word;}
 #content #post{-webkit-column-count:3;-moz-column-count:3;column-count:3;-webkit-column-gap:.2em;-moz-column-gap:.2em;column-gap:.2em;-webkit-column-rule:20px dotted #ff7f50;-moz-column-rule:20px dotted #ff7f50;column-rule:20px dotted #ff7f50;padding:20px;height:auto;}
 #content #post h1{-webkit-column-span:all;column-span:all;margin-bottom:50px;text-align:center;font-size:3em;line-height:100%}
 #content #post .post{-webkit-transition:all .2s;-moz-transition:all .2s;-o-transition:all .2s;-ms-transition:all .2s;transition:all .2s;padding:0;width:100%;display:inline-block;margin-bottom:.2em;word-wrap:break-word;background:rgba(255,255,255,0.9);border-top:none;-webkit-box-shadow:none;box-shadow:none;}
